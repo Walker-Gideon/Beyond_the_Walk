@@ -4,71 +4,96 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>Beyond the Walk</title>
   </head>
   <body>
-    <nav class="top-header">
-      <div class="left_top_nav">
-        <div class="nav_area">
+    <nav class="top-header flex">
+      <div class="left_top_nav flex">
+        <div class="nav_area flex">
           <span><ion-icon name="pin"></ion-icon></span>
           <p>123 Street, New York, USA</p>
         </div>
 
-        <div class="nav_number">
+        <div class="nav_number flex">
           <span><ion-icon name="call"></ion-icon></span>
           <p>+233 248 232 548</p>
         </div>
 
-        <div class="nav_mail">
+        <div class="nav_mail flex">
           <span><ion-icon name="mail-open"></ion-icon></span>
           <a href="mailto:gideonawortwe3@gmail.com">Email Us</a>
         </div>
       </div>
 
-      <div class="right_top_nav">
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-          <span><ion-icon name="logo-twitter"></ion-icon></span>
-        </a>
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <span><ion-icon name="logo-facebook"></ion-icon></span>
-        </a>
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-          <span><ion-icon name="logo-linkedin"></ion-icon></span>
-        </a>
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <span><ion-icon name="logo-instagram"></ion-icon></span>
-        </a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <span><ion-icon name="logo-youtube"></ion-icon></span>
-        </a>
+      <div class="right_top_nav flex">
+        <div class="link-container">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <span><ion-icon name="logo-twitter"></ion-icon></span>
+          </a>
+        </div>
+
+        <div class="link-container">
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <span><ion-icon name="logo-facebook"></ion-icon></span>
+          </a>
+        </div>
+
+        <div class="link-container">
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <span><ion-icon name="logo-linkedin"></ion-icon></span>
+          </a>
+        </div>
+
+        <div class="link-container">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <span><ion-icon name="logo-instagram"></ion-icon></span>
+          </a>
+        </div>
+
+        <div class="link-container">
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+            <span><ion-icon name="logo-youtube"></ion-icon></span>
+          </a>
+        </div>
       </div>
     </nav>
 
     <div class="hero">
       <!-- Navigations -->
-      <header class="hero-header">
-        <div class="logo">
+      <header class="hero-header flex">
+        <div class="logo flex">
           <span><ion-icon name="pin"></ion-icon></span>
-          <a href="#">BeyondəWʌʅʞ</a>
+          <a href="#">Beyond<span>the</span>Walk</a>
         </div>
 
         <nav class="nav-links">
-          <ul>
-            <li><a href="#" class="section-title">Home</a></li>
-            <li><a href="#" class="section-title">About</a></li>
-            <li><a href="#" class="section-title">Services</a></li>
-            <li class="has-submenu">
-              <a href="#" class="section-title-pages">Pages</a>
+          <ul class="flex">
+            <li><a href="#" class="section-title flex">Home</a></li>
+            <li><a href="#" class="section-title flex">About</a></li>
+            <li><a href="#" class="section-title flex">Services</a></li>
+
+            <li class="has-submenu flex">
+              <a href="#" class="section-title-pages flex">Pages</a>
 
               <ul>
-                <li><a href="#" class="pages-btn">Destination</a></li>
-                <li><a href="#" class="pages-btn">Booking</a></li>
-                <li><a href="#" class="pages-btn">Travel Guides</a></li>
-                <li><a href="#" class="pages-btn">Testimonial</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Travel Guides</a></li>
+                <li><a href="#">Testimonial</a></li>
               </ul>
             </li>
-            <li><a href="#" class="section-title">Contact</a></li>
+
+            <li><a href="#" class="section-title flex">Contact</a></li>
 
             <!-- Book now button -->
             <li><a href="#" class="nav-btn">Book now</a></li>
@@ -84,19 +109,19 @@
         ></div>
         <div
           class="slide"
-          style="background-image: url('./images/bg-hero.jpg')"
+          style="background-image: url('./images/header.jpg')"
         ></div>
         <div
           class="slide"
-          style="background-image: url('./images/bg-hero.jpg')"
+          style="background-image: url('./images/img3.jpg')"
         ></div>
         <div
           class="slide"
-          style="background-image: url('./images/bg-hero.jpg')"
+          style="background-image: url('./images/page-banner.jpg')"
         ></div>
         <div
           class="slide"
-          style="background-image: url('./images/bg-hero.jpg')"
+          style="background-image: url('./images/carousel-1.jpg')"
         ></div>
       </div>
 
@@ -104,7 +129,9 @@
       <div class="hero-content">
         <h1>Travel. Discover. Explore.</h1>
         <p>Enjoy your vacation with us and make memories to cherish forever.</p>
-        <button class="cta-btn">Get Started</button>
+
+        <!--  btn--scroll-to will use this class name for js logic -->
+        <button class="btn--text">Learn more &DownArrow;</button>
       </div>
     </div>
 
