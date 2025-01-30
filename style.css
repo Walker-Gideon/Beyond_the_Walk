@@ -3,11 +3,28 @@
 
 :root {
   --primary: #86b817;
+  --primary-sec: #9fc74a;
   --secondary: #fe8800;
   --light: #f5f5f5;
+  --white-col: #fff;
+  --light-white: #ddd;
+  --col-dark: #333;
   --dark: #14141f;
 
   /* #6e32ef violet */
+  /* color: #808b8d; */
+
+  /*** Typography ***/
+  --font: 1rem;
+  --font-small: 1.2rem;
+  --font-mid-small: 1.5rem;
+  --font-medium: 1.8rem;
+  --header-font: 3.5rem;
+
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-medium-weight: 500;
+  --font-small-weight: 400;
 }
 
 * {
@@ -19,7 +36,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  font-size: 1rem;
+  font-size: var(--font);
 }
 
 body {
@@ -27,11 +44,10 @@ body {
 
   margin: 0;
   font-family: "Heebo", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #808b8d;
-  background-color: #fff;
+  background-color: var(--light);
+  font-size: var(--font);
+  font-weight: var(--font-small-weight);
+  /* line-height: 1.5; */
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -46,11 +62,74 @@ button:focus {
   outline: none;
 }
 
+.container {
+  max-width: 120rem;
+  padding: 0 5rem;
+  margin: 0 auto;
+}
+
+/*** Grids  ***/
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--2-cols2 {
+  grid-template-columns: 30% 70%;
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid--center-v {
+  align-items: center;
+}
+
+/*** Link Text ***/
+.link-text {
+  color: var(--primary);
+  font-weight: var(--font-small-weight);
+  font-family: "Manrope", sans-serif;
+  letter-spacing: 5px;
+}
+
+.services,
+.pages,
+.contact {
+  font-size: var(--font);
+}
+
+/*** Button ***/
+.btn {
+  display: inline-block;
+  font-family: "Nunito", sans-serif;
+  font-size: var(--font);
+  font-weight: var(--font-semibold);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--primary-sec);
+}
+
 /*** Company Infomation and socials ***/
 .top-header {
   background-color: var(--dark);
   color: var(--light);
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 3rem;
   justify-content: space-between;
 }
 
@@ -74,6 +153,7 @@ button:focus {
 .nav_area p,
 .nav_number p,
 .nav_mail a {
+  font-size: 0.8rem;
   text-align: center;
   margin-bottom: 0.2rem;
 }
@@ -87,18 +167,18 @@ button:focus {
 .nav_area span,
 .nav_number span,
 .nav_mail span {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: var(--font-mid-small);
+  font-weight: var(--font-bold);
 }
 
 .right_top_nav a {
   text-decoration: none;
   background-color: var(--dark);
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 50%;
-  padding: 0.5rem;
-  font-size: 1rem;
+  color: var(--white-col);
+  border: 1px solid var(--white-col);
+  border-radius: 50%; /*fix the circle here */
+  padding: 0.2rem;
+  font-size: var(--font);
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -109,7 +189,7 @@ button:focus {
 }
 
 .right_top_nav a span {
-  font-size: 1rem;
+  font-size: var(--font);
 }
 
 /*** Hero and Navigation ***/
@@ -118,8 +198,7 @@ button:focus {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  color: #fff;
-  /* font-family: Arial, sans-serif; */
+  color: var(--white-col);
 }
 
 .hero-header {
@@ -128,7 +207,7 @@ button:focus {
   width: 100%;
   justify-content: space-between;
   padding-left: 2rem;
-  border-bottom: 0.5px solid #ddd;
+  border-bottom: 0.5px solid var(--light-white);
   z-index: 2;
 }
 
@@ -145,14 +224,14 @@ button:focus {
 
 .logo a {
   font-size: 2.2rem;
-  font-weight: bold;
+  font-weight: var(--font-bold);
   text-decoration: none;
-  color: #86b817;
+  color: var(--primary);
   margin-bottom: 0.5rem;
 }
 
 .logo a span {
-  font-size: 1.2rem;
+  font-size: var(--font-small);
 }
 
 /*** Section Title ***/
@@ -177,7 +256,7 @@ button:focus {
   text-decoration: none;
   font-family: "Nunito", sans-serif;
   position: relative;
-  color: #ffffff !important;
+  color: var(--white-col) !important;
   font-weight: 600;
   outline: none;
   cursor: pointer;
@@ -202,17 +281,11 @@ button:focus {
 
 .nav-btn {
   background-color: var(--primary);
-  display: inline-block;
-  padding: 0.6rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   margin-right: 2.5rem;
   border-radius: 5rem;
-  font-size: 1.2rem;
   border: 1px solid var(--primary);
   transition: color 0.5s;
-}
-
-.nav-btn:hover {
-  background-color: #9fc74a;
 }
 
 .nav-links .section-title:hover::before,
@@ -264,8 +337,6 @@ button:focus {
   padding: 0.5rem;
   height: 13rem;
   display: none;
-  /* Need ti fix the z-index  */
-  z-index: 999;
 }
 
 .has-submenu ul a {
@@ -278,13 +349,13 @@ button:focus {
   border-radius: 0.5rem;
   text-decoration: none;
   font-family: "Nunito", sans-serif;
-  font-weight: 600;
+  font-weight: var(--font-semibold);
   outline: none;
   transition: 0.5s;
 }
 
 .has-submenu ul a:hover {
-  background-color: #ddd;
+  background-color: var(--light-white);
   padding: 1rem;
 }
 
@@ -403,30 +474,126 @@ button:focus {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: var(--header-font);
 }
 
 .hero-content p {
-  font-size: 1.8rem;
+  font-size: var(--font-medium);
 }
 
 .btn--text {
   display: inline-block;
   background: none;
-  font-size: 1.7rem;
+  font-size: var(--font-mid-small);
   font-family: inherit;
-  font-weight: 500;
+  font-weight: var(--font-medium-weight);
   color: var(--primary);
   border: none;
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid var(--primary);
   padding-bottom: 2px;
   cursor: pointer;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   transition: color 0.5s;
 }
 
 .btn--text:hover {
-  color: #9fc74a;
+  color: var(--primary-sec);
+}
+
+/*** About section ***/
+.about-section {
+}
+
+.inner-about-container {
+  gap: 2rem;
+  align-items: center;
+}
+
+.img-container {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  z-index: -1;
+}
+
+.img-container img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.about-content {
+  width: 54rem;
+  border: 1px solid var(--white-col);
+  background-color: var(--white-col);
+  padding: 1.8rem;
+  margin-left: -8rem;
+}
+
+.about-us {
+  font-size: var(--font-small);
+}
+
+.about-text-cont h1 {
+  color: var(--dark);
+  font-size: var(--header-font);
+  font-weight: var(--font-bold);
+  line-height: 1;
+  margin: 0.8rem 0rem;
+}
+
+.about-text-cont p {
+  color: var(--col-dark);
+  font-size: var(--font-small);
+  margin-bottom: 1rem;
+}
+
+.about-imgs {
+  gap: 2rem;
+}
+
+.about-imgs img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.about-btn--text {
+  background-color: var(--primary);
+  color: var(--white-col);
+  border: none;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.about-bottom-container {
+  padding: 3rem 0rem;
+  gap: 2rem;
+}
+
+.inner-bot-container {
+  gap: 1rem;
+}
+
+.about-bot-icon {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--white-col);
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 2rem;
+}
+
+.about-htext {
+  color: var(--dark);
+  font-size: var(--font-mid-small);
+  font-weight: var(--font-medium-weight);
+}
+
+.text-about p {
+  color: var(--col-dark);
+  font-size: var(--font);
 }
 
 /* .dropdown {
@@ -510,44 +677,6 @@ button:focus {
   transition: opacity 0.5s ease-out, visibility 0s linear 0s;
   visibility: visible;
   opacity: 1;
-}
-
-/*** Button ***/
-.btn {
-  font-family: "Nunito", sans-serif;
-  font-weight: 600;
-  transition: 0.5s;
-}
-
-.btn.btn-primary,
-.btn.btn-secondary {
-  color: #ffffff;
-}
-
-.btn-square {
-  width: 38px;
-  height: 38px;
-}
-
-.btn-sm-square {
-  width: 32px;
-  height: 32px;
-}
-
-.btn-lg-square {
-  width: 48px;
-  height: 48px;
-}
-
-.btn-square,
-.btn-sm-square,
-.btn-lg-square {
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: normal;
-  border-radius: 0px;
 }
 
 /*** Navbar ***/

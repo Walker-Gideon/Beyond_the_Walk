@@ -4,6 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
@@ -32,39 +50,25 @@
       </div>
 
       <div class="right_top_nav flex">
-        <div class="link-container">
-          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-            <span><ion-icon name="logo-twitter"></ion-icon></span>
-          </a>
-        </div>
+        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+          <span><ion-icon name="logo-twitter"></ion-icon></span>
+        </a>
 
-        <div class="link-container">
-          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-            <span><ion-icon name="logo-facebook"></ion-icon></span>
-          </a>
-        </div>
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+          <span><ion-icon name="logo-facebook"></ion-icon></span>
+        </a>
 
-        <div class="link-container">
-          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-            <span><ion-icon name="logo-linkedin"></ion-icon></span>
-          </a>
-        </div>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+          <span><ion-icon name="logo-linkedin"></ion-icon></span>
+        </a>
 
-        <div class="link-container">
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            aria-label="Instagram"
-          >
-            <span><ion-icon name="logo-instagram"></ion-icon></span>
-          </a>
-        </div>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+          <span><ion-icon name="logo-instagram"></ion-icon></span>
+        </a>
 
-        <div class="link-container">
-          <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-            <span><ion-icon name="logo-youtube"></ion-icon></span>
-          </a>
-        </div>
+        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+          <span><ion-icon name="logo-youtube"></ion-icon></span>
+        </a>
       </div>
     </nav>
 
@@ -96,7 +100,7 @@
             <li><a href="#" class="section-title flex">Contact</a></li>
 
             <!-- Book now button -->
-            <li><a href="#" class="nav-btn">Book now</a></li>
+            <li><a href="#" class="nav-btn btn">Book now</a></li>
           </ul>
         </nav>
       </header>
@@ -136,10 +140,89 @@
     </div>
 
     <main>
-      <section>sec 1</section>
-      <section>sec 2</section>
-      <section>sec 3</section>
-      <section>sec 4</section>
+      <!-- About section -->
+      <section class="about-section container">
+        <div class="inner-about-container grid grid--2-cols">
+          <div class="img-container">
+            <img src="images/about.jpg" alt="A lady going on a hike" />
+          </div>
+
+          <div class="about-content">
+            <div class="about-text-cont">
+              <h3 class="link-text about-us">ABOUT US</h3>
+              <h1>We Provide Best Tour Packages In Your Budget</h1>
+              <p>
+                Discover a world of possibilities with our budget-friendly tour
+                packages. From serene getaways to thrilling adventures, we craft
+                unique experiences to match your desires. Travel smart, travel
+                happy—your unforgettable journey begins with us!
+              </p>
+            </div>
+            <div class="about-imgs grid grid--2-cols">
+              <img src="images/about-1.jpg" alt="" />
+              <img src="images/about-2.jpg" alt="" />
+            </div>
+
+            <button class="about-btn--text btn">Read more</button>
+          </div>
+        </div>
+
+        <div class="about-bottom-container grid grid--3-cols">
+          <div class="inner-bot-container grid grid--2-cols2">
+            <div class="about-bot-icon flex">
+              <i class="fa fa-2x fa-money-check-alt"></i>
+            </div>
+            <div class="text-about">
+              <h5 class="about-htext">Competitive Pricing</h5>
+              <p>
+                Magna sit magna dolor duo dolor labore rebum amet elitr est diam
+                sea
+              </p>
+            </div>
+          </div>
+
+          <div class="inner-bot-container grid grid--2-cols2">
+            <div class="about-bot-icon flex">
+              <i class="fa fa-2x fa-award"></i>
+            </div>
+            <div class="text-about">
+              <h5 class="about-htext">Best Services</h5>
+              <p>
+                Magna sit magna dolor duo dolor labore rebum amet elitr est diam
+                sea
+              </p>
+            </div>
+          </div>
+
+          <div class="inner-bot-container grid grid--2-cols2">
+            <div class="about-bot-icon flex">
+              <i class="fa fa-2x fa-globe"></i>
+            </div>
+            <div class="text-about">
+              <h5 class="about-htext">Worldwide Coverage</h5>
+              <p>
+                Magna sit magna dolor duo dolor labore rebum amet elitr est diam
+                sea
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services section -->
+      <section class="services-section container">
+        <h3 class="link-text services">OUR SERVICES</h3>
+      </section>
+
+      <!-- Pages -->
+      <section class="pages-section container">
+        <h3 class="link-text pages">PAGES</h3>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact-section container">
+        <h3 class="link-text contact">CONTACT</h3>
+      </section>
     </main>
 
     <footer>
