@@ -1,18 +1,67 @@
 @import "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css";
 @import "https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap";
 
+/* check this ut 
+#151618
+ #a1a2a3
+ #e8e8e8
+ #212224
+  #9e70eb */
+
 :root {
-  --primary: #86b817;
+  /* --primary: #86b817; */
+  --primary: hsl(var(--hue-color), 64%, 22%);
   --primary-sec: #9fc74a;
   --secondary: #fe8800;
   --light: #f5f5f5;
   --white-col: #fff;
   --light-white: #ddd;
+  --low-dark: #656565;
   --col-dark: #333;
   --dark: #14141f;
 
+  --hue-color: 190;
+
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 64%, 22%);
+  --first-color-second: hsl(var(--hue-color), 64%, 22%);
+  --first-color-alt: hsl(var(--hue-color), 64%, 15%);
+  --title-color: hsl(var(--hue-color), 64%, 18%);
+  --text-color: hsl(var(--hue-color), 24%, 35%);
+  --text-color-light: hsl(var(--hue-color), 8%, 60%);
+  --input-color: hsl(var(--hue-color), 24%, 97%);
+  --body-color: hsl(var(--hue-color), 100%, 99%);
+  --white-color: #fff;
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 75%);
+
   /* #6e32ef violet */
   /* color: #808b8d; */
+
+  /* 
+  Main colors
+  --first-color: #00548c; 
+--first-color-second: #00548c; 
+--first-color-alt: #003a69;
+--title-color: #00477b;
+--text-color: #546562;
+--text-color-light: #939393;
+--input-color: #f7f7f7;
+--body-color: #fcffff;/
+--white-color: #ffffff;
+--scroll-bar-color: #e1e1e1;
+--scroll-thumb-color: #bdbdbd; 
+
+Dark colors
+--first-color-second: #1a1c0d; 
+--title-color: #f2f2f2; 
+--text-color: #c0c0c0; 
+--input-color: #2c251f; 
+--body-color: #211c17; 
+--scroll-bar-color: #7a746e; 
+--scroll-thumb-color: #5a564f; 
+
+*/
 
   /*** Typography ***/
   --font: 1rem;
@@ -66,6 +115,18 @@ button:focus {
   max-width: 120rem;
   padding: 0 5rem;
   margin: 0 auto;
+}
+
+.sections {
+  padding: 6rem 8rem;
+}
+
+.header-secondary {
+  color: var(--dark);
+  font-size: var(--header-font);
+  font-weight: var(--font-bold);
+  line-height: 1;
+  margin: 0.8rem 0rem;
 }
 
 /*** Grids  ***/
@@ -173,10 +234,10 @@ button:focus {
 
 .right_top_nav a {
   text-decoration: none;
-  background-color: var(--dark);
+  /* background-color: var(--dark); */
   color: var(--white-col);
-  border: 1px solid var(--white-col);
-  border-radius: 50%; /*fix the circle here */
+  /* border: 1px solid var(--white-col); */
+  /* border-radius: 50%;  */
   padding: 0.2rem;
   font-size: var(--font);
   cursor: pointer;
@@ -184,8 +245,8 @@ button:focus {
 }
 
 .right_top_nav a:hover {
-  background-color: var(--light);
-  color: var(--dark);
+  /* background-color: var(--light); */
+  color: var(--light-white);
 }
 
 .right_top_nav a span {
@@ -219,7 +280,7 @@ button:focus {
 
 .logo span {
   font-size: 2.5rem;
-  color: var(--primary);
+  color: var(--white-col);
 }
 
 .logo a {
@@ -483,21 +544,22 @@ button:focus {
 
 .btn--text {
   display: inline-block;
-  background: none;
-  font-size: var(--font-mid-small);
+  background-color: var(--white-col);
+  font-size: 1.1rem;
   font-family: inherit;
-  font-weight: var(--font-medium-weight);
-  color: var(--primary);
-  border: none;
-  border-bottom: 1px solid var(--primary);
-  padding-bottom: 2px;
+  font-weight: var(--font-bold);
+  color: var(--col-dark);
+  border: 2px solid var(--white-col);
+  padding: 1rem 1.2rem;
+  border-radius: 9px;
   cursor: pointer;
   margin-top: 1.5rem;
-  transition: color 0.5s;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .btn--text:hover {
-  color: var(--primary-sec);
+  color: var(--white-col);
+  background-color: transparent;
 }
 
 /*** About section ***/
@@ -535,14 +597,6 @@ button:focus {
   font-size: var(--font-small);
 }
 
-.about-text-cont h1 {
-  color: var(--dark);
-  font-size: var(--header-font);
-  font-weight: var(--font-bold);
-  line-height: 1;
-  margin: 0.8rem 0rem;
-}
-
 .about-text-cont p {
   color: var(--col-dark);
   font-size: var(--font-small);
@@ -569,7 +623,7 @@ button:focus {
 
 .about-bottom-container {
   padding: 3rem 0rem;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .inner-bot-container {
@@ -586,14 +640,56 @@ button:focus {
 }
 
 .about-htext {
-  color: var(--dark);
+  color: var(--col-dark);
   font-size: var(--font-mid-small);
   font-weight: var(--font-medium-weight);
 }
 
 .text-about p {
-  color: var(--col-dark);
+  color: var(--low-dark);
   font-size: var(--font);
+}
+
+/*** SERVICES ***/
+.services-section {
+}
+
+.services-header-container {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.header-font {
+  font-size: 2rem;
+  color: var(--col-dark);
+}
+
+.services-content-container {
+  gap: 2rem;
+}
+
+.service-content {
+}
+
+.service-content i {
+  font-size: var(--font-small);
+  color: var(--primary);
+  background-color: var(--primary-sec);
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 50%;
+}
+
+.service-content h5 {
+  font-size: var(--font-mid-small);
+  color: var(--col-dark);
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.service-content p {
+  font-size: var(--font-small);
+  line-height: 1.4;
 }
 
 /* .dropdown {
