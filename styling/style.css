@@ -79,7 +79,7 @@ button:focus {
 }
 
 .sections {
-  padding: 9.6rem 8rem;
+  padding: 6.4rem 8rem;
 }
 
 .header-secondary {
@@ -577,7 +577,7 @@ button:focus {
 }
 
 .about-bottom-container {
-  padding: 3rem 0rem;
+  padding-top: 3rem;
   gap: 2.5rem;
 }
 
@@ -645,23 +645,15 @@ button:focus {
 
 /*** DESTINATION ***/
 .destination-section {
-  padding: 0rem 5rem 9.6rem;
+  padding: 0rem 6rem 6.4rem 3rem;
 }
 
 /*** Gallery ***/
 .gallery {
   display: grid;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
-  /* grid-gap: 2rem; */
-  /* grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); */
   gap: 2rem;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-auto-rows: 40rem; */
-  /* grid-auto-flow: dense; */
-
-  /* margin-right: 2rem; */
 }
 
 .gallery-h,
