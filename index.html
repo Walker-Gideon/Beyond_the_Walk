@@ -160,7 +160,7 @@
               <img src="images/about-2.jpg" alt="" />
             </div>
 
-            <button class="about-btn--text btn">Read more</button>
+            <button class="btn about-btn--text">Read more</button>
           </div>
         </div>
 
@@ -431,53 +431,151 @@
       </section>
 
       <!-- Booking -->
-      <section class="booking-section container grid grid--2-cols">
-        <div class="blur-overlay">
-          <div class="left-booking-container">
-            <h3 class="link-text services">Booking</h3>
-            <h1 class="header-secondary header-font">
-              Seamless Online Booking
-            </h1>
-            <p>
-              Planning your dream trip has never been easier! Our user-friendly
-              online booking platform allows you to search, compare, and reserve
-              flights, hotels, and guided tours in just a few clicks. With
-              real-time availability, secure payment options, and instant
-              confirmations, you can book your next adventure stress-free from
-              the comfort of your home.
-            </p>
-            <p>
-              We understand that travel plans can change, which is why we offer
-              flexible booking options and 24/7 customer support to assist you
-              every step of the way. Whether you're looking for a luxury
-              getaway, a budget-friendly escape, or a spontaneous weekend trip,
-              we ensure a smooth and reliable booking experience tailored to
-              your needs.
-            </p>
+      <section class="booking-section container">
+        <div class="booking-bg">
+          <div class="booking-inner grid grid--2-cols">
+            <div class="left-booking-container">
+              <h3>Booking</h3>
+              <h1>Seamless Online Booking</h1>
+              <p>
+                Planning your dream trip has never been easier! Our
+                user-friendly online booking platform allows you to search,
+                compare, and reserve flights, hotels, and guided tours in just a
+                few clicks. With real-time availability, secure payment options,
+                and instant confirmations, you can book your next adventure
+                stress-free from the comfort of your home.
+              </p>
+              <p>
+                We understand that travel plans can change, which is why we
+                offer flexible booking options and 24/7 customer support to
+                assist you every step of the way. Whether you're looking for a
+                luxury getaway, a budget-friendly escape, or a spontaneous
+                weekend trip, we ensure a smooth and reliable booking experience
+                tailored to your needs.
+              </p>
 
-            <button>Read More</button>
+              <button class="btn booking-read-btn">Read More</button>
+            </div>
+
+            <div class="righ-booking-container">
+              <h1>Book A Tour</h1>
+              <form action="#">
+                <div class="booking-top-input flex">
+                  <input type="text" placeholder="Your Name" required />
+                  <input type="email" placeholder="Your Email" required />
+                </div>
+
+                <div class="booking-top-next-input flex">
+                  <input type="date" placeholder="Date & Time" required />
+
+                  <select name="Destination 1" id="">
+                    <option value="1">Destination 1</option>
+                    <option value="2">Destination 2</option>
+                    <option value="3">Destination 3</option>
+                  </select>
+                </div>
+
+                <textarea
+                  name=""
+                  id=""
+                  placeholder="Special Request"
+                ></textarea>
+                <button type="submit" class="btn booking-read-btn">
+                  Book Now
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="process-section container">
+        <div class="services-header-container">
+          <h3 class="link-text services">Process</h3>
+          <h1 class="header-secondary header-font">
+            Everything as simple as possible, but no simpler. Just 3 easy steps!
+          </h1>
+        </div>
+
+        <div class="operations">
+          <div class="operations-tab-container">
+            <button
+              class="btn-btn operations__tab operations__tab--1 operations__tab--active"
+              data-tab="1"
+            >
+              <span>01</span>Choose A Destination
+            </button>
+            <button
+              class="btn-btn operations__tab operations__tab--2"
+              data-tab="2"
+            >
+              <span>02</span>Pay Online
+            </button>
+            <button
+              class="btn-btn operations__tab operations__tab--3"
+              data-tab="3"
+            >
+              <span>03</span>Fly Today
+            </button>
           </div>
 
-          <div class="righ-booking-container">
-            <form action="#">
-              <div class="flex">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-              </div>
+          <div
+            class="operations__content operations__content--1 operations__content--active"
+          >
+            <div class="operations__icon operations__icon--1">
+              <!-- <svg>
+                <use xlink:href="img/icons.svg#icon-upload"></use>
+              </svg> -->
 
-              <div class="flex">
-                <input type="date" placeholder="Date & Time" required />
+              <i class="fa fa-globe fa-3x text-white"></i>
+            </div>
+            <h5 class="operations__header">
+              Tranfser money to anyone, instantly! No fees, no BS.
+            </h5>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
 
-                <select name="Destination 1" id="">
-                  <option value="1">Destination 1</option>
-                  <option value="2">Destination 2</option>
-                  <option value="3">Destination 3</option>
-                </select>
-              </div>
+          <div class="operations__content operations__content--2">
+            <div class="operations__icon operations__icon--2">
+              <!-- <svg>
+                <use xlink:href="img/icons.svg#icon-home"></use>
+              </svg> -->
 
-              <textarea name="" id="" placeholder="Special Request"></textarea>
-              <button type="submit">Book Now</button>
-            </form>
+              <i class="fa fa-dollar-sign fa-3x text-white"></i>
+            </div>
+            <h5 class="operations__header">
+              Buy a home or make your dreams come true, with instant loans.
+            </h5>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </div>
+          <div class="operations__content operations__content--3">
+            <div class="operations__icon operations__icon--3">
+              <!-- <svg>
+                <use xlink:href="img/icons.svg#icon-user-x"></use>
+              </svg> -->
+
+              <i class="fa fa-plane fa-3x text-white"></i>
+            </div>
+            <h5 class="operations__header">
+              No longer need your account? No problem! Close it instantly.
+            </h5>
+            <p>
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+              officia deserunt mollit anim id est laborum. Ut enim ad minim
+              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat.
+            </p>
           </div>
         </div>
       </section>

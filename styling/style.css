@@ -14,14 +14,6 @@
   --col-dark: #333;
   --dark: #14141f;
 
-  --first-color: #134d58;
-  --first-color-second: #134d58;
-  --first-color-alt: #0d353d;
-  --title-color: #0f4049;
-  --text-color: #4c6b71;
-  --text-color-light: #969e9f;
-  --input-color: #f1f9fa;
-  --body-color: #f0feff;
   --scroll-bar-color: #dce5e6;
   --scroll-thumb-color: #afbdbe;
 
@@ -66,10 +58,6 @@ body {
 .flex {
   display: flex;
   align-items: center;
-}
-
-button:focus {
-  outline: none;
 }
 
 .container {
@@ -134,18 +122,44 @@ button:focus {
 }
 
 /*** Button ***/
+button:focus {
+  outline: none;
+}
+
 .btn {
   display: inline-block;
   font-family: "Nunito", sans-serif;
   font-size: var(--font);
   font-weight: var(--font-semibold);
+  border: 1px solid;
+  padding: 1.2rem 2.8rem;
+  margin-top: 2rem;
   transition: 0.5s;
   cursor: pointer;
 }
 
 .btn:hover {
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
 }
+
+.btn-btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-btn:hover {
+  background-color: var(--color-primary-darker);
+}
+
+/*****************************************/
 
 /*** Company Infomation and socials ***/
 .top-header {
@@ -566,10 +580,7 @@ button:focus {
 .about-btn--text {
   background-color: var(--primary);
   color: var(--white-col);
-  border: none;
-  padding: 1rem 2rem;
-  margin-top: 2rem;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .about-btn--text:hover {
@@ -817,31 +828,231 @@ img {
 }
 
 /*** Booking ***/
-.booking-section {
-  padding: 0 5rem 9.6rem;
-  gap: 2rem;
-  background-image: url(../images/booking.jpg);
+.booking-bg {
+  background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)),
+    url(../images/booking.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  padding: 3rem 3rem 5rem;
+}
+
+.booking-inner {
+  gap: 3rem;
+}
+
+.left-booking-container {
+  margin-top: 7rem;
+}
+
+.left-booking-container h3,
+.left-booking-container h1,
+.left-booking-container p,
+.righ-booking-container h1 {
+  color: var(--white-col);
+}
+
+.left-booking-container h3,
+.left-booking-container h1,
+.righ-booking-container h1 {
+  font-weight: var(--font-bold);
+}
+
+.left-booking-container h3 {
+  font-size: var(--font-mid-small);
+}
+
+.left-booking-container h1 {
+  font-size: 3rem;
+}
+
+.left-booking-container p {
+  font-size: var(--font);
+  margin-top: 1.8rem;
+}
+
+.booking-read-btn {
+  background-color: transparent;
+  color: var(--white-col);
+  border-color: var(--white-col);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.booking-read-btn:hover {
+  background-color: var(--white-col);
+  color: var(--dark);
+}
+
+.righ-booking-container h1 {
+  font-size: var(--header-font);
+}
+
+.booking-top-input,
+.booking-top-next-input {
+  gap: 1.5rem;
+}
+
+.booking-top-input {
+  margin-top: 2rem;
+}
+
+.booking-top-next-input {
+  margin: 2rem 0rem;
+}
+
+.righ-booking-container input,
+.righ-booking-container select {
+  width: 50%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.5rem;
+  font-size: var(--font);
+  color: var(--light-white);
+  background: transparent;
+  border: 1px solid var(--white-col);
+}
+
+.righ-booking-container input::placeholder {
+  color: var(--light-white);
+  font-size: 1.1rem;
+}
+
+.righ-booking-container textarea {
   width: 100%;
-  position: relative;
+  height: 10rem;
+  padding: 1rem;
+  background: transparent;
+  font-size: var(--font);
+  color: var(--light-white);
+  border: 1px solid var(--white-col);
 }
 
-.blur-overlay {
-  position: absolute;
+/* This isn't working now */
+.righ-booking-container input:focus,
+.righ-booking-container select:focus,
+.righ-booking-container textarea {
+  outline: var(--primary);
+}
+
+.righ-booking-container button {
   width: 100%;
-  height: 100%;
-  backdrop-filter: blur(2px);
 }
 
-.left-booking-container,
-.righ-booking-container {
-  z-index: 2;
+/*** Process ***/
+.process-section {
+  padding: 6.4rem 8rem;
 }
 
-/*** SERVICES ***/
+.operations {
+  max-width: 100rem;
+  margin: 12rem auto 0 auto;
+  background-color: #fff;
+}
+
+.operations-tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+.operations__tab {
+  margin-right: 2.5rem;
+  transform: translateY(-50%);
+}
+
+.operations__tab span {
+  margin-right: 1rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.operations__tab--1 {
+  background-color: #ffcb03;
+}
+
+.operations__tab--1:hover {
+  background-color: #ffbb00;
+}
+
+.operations__tab--2 {
+  background-color: #5ec576;
+}
+
+.operations__tab--2:hover {
+  background-color: #4bbb7d;
+}
+
+.operations__tab--3 {
+  background-color: #ff585f;
+  margin: 0;
+}
+
+.operations__tab--3:hover {
+  background-color: #fd424b;
+}
+
+.operations__tab--active {
+  transform: translateY(-66%);
+}
+
+.operations__content {
+  display: none;
+
+  /* JUST PRESENTATIONAL */
+  font-size: 1.7rem;
+  padding: 2.5rem 7rem 6.5rem 7rem;
+}
+
+.operations__content--active {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+}
+
+.operations__header {
+  font-size: 2.25rem;
+  font-weight: 500;
+  align-self: center;
+}
+
+.operations__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+}
+
+.operations__icon svg {
+  height: 2.75rem;
+  width: 2.75rem;
+}
+
+.operations__content p {
+  grid-column: 2;
+}
+
+.operations__icon--1 {
+  background-color: #ffcd0331;
+}
+.operations__icon--2 {
+  background-color: #5ec5763a;
+}
+.operations__icon--3 {
+  background-color: #ff58602d;
+}
+.operations__icon--1 svg {
+  fill: #ffbb00;
+}
+.operations__icon--2 svg {
+  fill: #5ec576;
+}
+.operations__icon--3 svg {
+  fill: #ff585f;
+}
+
 /*** SERVICES ***/
 /*** SERVICES ***/
 
