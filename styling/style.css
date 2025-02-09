@@ -1148,6 +1148,117 @@ img {
 }
 
 /*** Testimonial ***/
+.testimonial-section {
+  margin: 8rem 2rem;
+}
+
+.slider-testimonial {
+  position: relative;
+  max-width: 100rem;
+  gap: 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide-testimonial {
+  min-width: 100%;
+  border: 1px solid var(--light-white);
+  padding: 1rem;
+  box-sizing: border-box;
+  text-align: center;
+  transform: translateX(100%);
+  opacity: 0.5;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.slide-testimonial.active {
+  opacity: 1;
+}
+
+/* Active Slide (center) */
+.slide-testimonial.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Previous Slide (moves out to the left) */
+.slide-testimonial.prev {
+  transform: translateX(-100%);
+  opacity: 0.3;
+}
+
+/* Next Slide (moves in from the right) */
+.slide-testimonial.next {
+  transform: translateX(100%);
+  opacity: 0.3;
+}
+
+.slide-testimonial > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial__text {
+  font-size: var(--font-small);
+  color: var(--low-dark);
+}
+
+.testimonial__author {
+  font-style: normal;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonial__photo {
+  width: 6.5rem;
+  border: 4px solid var(--white-col);
+  border-radius: 50%;
+  margin-bottom: 0.8rem;
+}
+
+.testimonial__name {
+  font-size: var(--font-mid-small);
+  color: var(--col-dark);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.testimonial__location {
+  font-size: 0.8rem;
+  color: var(--dark);
+  margin-bottom: 0.8rem;
+}
 
 /*** footer ***/
 /***  ***/
