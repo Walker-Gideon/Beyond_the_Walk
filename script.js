@@ -1,5 +1,22 @@
 "use strict";
 
+// Pages link on arrow down
+const page_sidebtn = document.querySelector(".has-submenu");
+const page = document.querySelector(".section-title-pages");
+
+if (page_sidebtn && page) {
+  page_sidebtn.addEventListener("mouseenter", () => {
+    page.style.color = "#5ec576";
+  });
+
+  page_sidebtn.addEventListener("mouseleave", () => {
+    page.style.color = "#ffff";
+  });
+} else {
+  console.error("Element(s) not found:", { page_sidebtn, page });
+}
+
+/*
 // Testimonal slider
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".slide-testimonial");
@@ -57,3 +74,4 @@ document.addEventListener("DOMContentLoaded", function () {
   updateActiveSlide(currentIndex);
   startAutoSlide();
 });
+*/
