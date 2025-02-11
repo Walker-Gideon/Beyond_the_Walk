@@ -140,11 +140,11 @@ button:focus {
 .btn-btn {
   display: inline-block;
   background-color: var(--color-primary);
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-family: inherit;
   font-weight: 500;
   border: none;
-  padding: 1rem 4rem;
+  padding: 1.5rem 5rem;
   border-radius: 10rem;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -845,7 +845,7 @@ p.small {
 }
 
 .left-booking-container {
-  margin-top: 7rem;
+  margin-top: 8rem;
 }
 
 .left-booking-container h3,
@@ -858,19 +858,19 @@ p.small {
 .left-booking-container h3,
 .left-booking-container h1,
 .righ-booking-container h1 {
-  font-weight: var(--font-bold);
+  font-weight: 700;
 }
 
 .left-booking-container h3 {
-  font-size: var(--font-mid-small);
-}
-
-.left-booking-container h1 {
   font-size: 3rem;
 }
 
+.left-booking-container h1 {
+  font-size: 4.4rem;
+}
+
 .left-booking-container p {
-  font-size: var(--font);
+  font-size: 1.6rem;
   margin-top: 1.8rem;
 }
 
@@ -887,7 +887,8 @@ p.small {
 }
 
 .righ-booking-container h1 {
-  font-size: var(--header-font);
+  font-size: 4.4rem;
+  font-weight: 700;
 }
 
 .booking-top-input,
@@ -906,24 +907,22 @@ p.small {
 .righ-booking-container input,
 .righ-booking-container select {
   width: 50%;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 0.8rem;
-  padding-right: 0.5rem;
-  font-size: var(--font);
+  padding: 3rem 0.8rem 3rem 1rem;
+  font-size: 2rem;
   color: var(--light-white);
   background: transparent;
   border: 1px solid var(--white-col);
 }
 
-.righ-booking-container input::placeholder {
+.righ-booking-container input::placeholder,
+.righ-booking-container textarea::placeholder {
   color: var(--light-white);
-  font-size: 1.1rem;
+  font-size: 1.6rem;
 }
 
 .righ-booking-container textarea {
   width: 100%;
-  height: 10rem;
+  height: 15rem;
   padding: 1rem;
   background: transparent;
   font-size: var(--font);
@@ -943,12 +942,8 @@ p.small {
 }
 
 /*** Process ***/
-.process-section {
-  padding: 6.4rem 8rem;
-}
-
 .operations {
-  max-width: 100rem;
+  width: 90%;
   margin: 8rem auto 0 auto;
   background-color: #fff;
 }
@@ -1000,22 +995,19 @@ p.small {
 
 .operations__content {
   display: none;
-
-  /* JUST PRESENTATIONAL */
-  font-size: var(--font-medium);
-  padding: 2.5rem 7rem 6.5rem 7rem;
+  font-size: 2rem;
+  padding: 2rem 7rem 6.5rem 7rem;
 }
 
 .operations__content--active {
   display: grid;
   grid-template-columns: 7rem 1fr;
-  column-gap: 3rem;
-  row-gap: 0.5rem;
+  column-gap: 5rem;
 }
 
 .operations__header {
-  font-size: 2rem;
-  font-weight: var(--font-semibold);
+  font-size: 3.6rem;
+  font-weight: 600;
   align-self: center;
 }
 
@@ -1023,18 +1015,18 @@ p.small {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 6.5rem;
-  width: 6.5rem;
+  height: 9.6rem;
+  width: 9.6rem;
   border-radius: 50%;
 }
 
 .operations__icon i {
-  font-size: 2rem;
+  font-size: 3.6rem;
 }
 
 .operations__content p {
   grid-column: 2;
-  font-size: var(--font-mid-small);
+  font-size: 2.4rem;
 }
 
 .operations__icon--1 {
@@ -1061,10 +1053,6 @@ p.small {
 }
 
 /*** Travel Guide ***/
-.travel-guide-section {
-  margin-bottom: 8rem;
-}
-
 .guide-container {
   gap: 2rem;
 }
@@ -1074,12 +1062,12 @@ p.small {
   box-shadow: 0 0.8rem 1.4rem rgba(0, 0, 0, 0.2);
   border-radius: 11px;
   transition: all 0.4s;
-  height: 30rem;
+  height: 60rem;
 }
 
 .image-container {
   width: 100%;
-  height: 75%;
+  height: 80%;
   overflow: hidden;
   border-top-right-radius: 11px;
   border-top-left-radius: 11px;
@@ -1105,17 +1093,19 @@ p.small {
 
 .guide-socials {
   position: absolute;
-  bottom: 72px;
-  gap: 0.5rem;
+  bottom: 9rem;
+  gap: 0.8rem;
 }
 
 .social-con {
-  width: 3rem;
-  height: 3rem;
+  width: 6rem;
+  height: 6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  background: var(--white-col);
+  color: var(--primary);
   overflow: hidden;
   border-bottom: 1px solid var(--primary);
   transition: background 0.3s, color 0.3s;
@@ -1126,8 +1116,8 @@ p.small {
 }
 
 .guide-socials i {
-  font-size: var(--font-small);
-  background: #ffffff;
+  width: 100%;
+  font-size: 2rem;
   color: var(--primary);
   border-radius: 50%;
   padding: 1.2rem;
@@ -1142,17 +1132,13 @@ p.small {
 }
 
 .guide-fullname {
-  margin-top: 2rem;
-}
-
-.guide-fullname {
-  font-size: var(--font-small-weight);
-  font-weight: var(--font-semibold);
-  margin-bottom: 0.1rem;
+  margin: 4rem 0rem 0.1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .guide-title {
-  font-size: 0.9rem;
+  font-size: 1.4rem;
 }
 
 /*** Testimonial ***/
