@@ -1143,20 +1143,21 @@ p.small {
 
 /*** Testimonial ***/
 .testimonial-section {
-  margin: 8rem 2rem;
+  margin: 6.4rem 8rem;
 }
 
 .slider-testimonial {
-  position: relative;
-  max-width: 100rem;
+  /* position: relative; */
+  /* max-width: 100rem; */
   gap: 2rem;
-  margin: auto;
-  overflow: hidden;
+  /* margin: auto; */
+  /* overflow: hidden; */
 }
 
 .slider-wrapper {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  /* justify-content: center; */
+  /* transition: transform 0.5s ease-in-out; */
 }
 
 .slide-testimonial {
@@ -1165,8 +1166,8 @@ p.small {
   padding: 1rem;
   box-sizing: border-box;
   text-align: center;
-  transform: translateX(100%);
-  opacity: 0.5;
+  /* transform: translateX(100%); */
+  /* opacity: 0.5; */
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
@@ -1220,11 +1221,12 @@ p.small {
 }
 
 .testimonial {
-  position: relative;
+  /* position: relative; */
+  padding: 1rem 1rem 2rem;
 }
 
 .testimonial__text {
-  font-size: var(--font-small);
+  font-size: 1.4rem;
   color: var(--low-dark);
 }
 
@@ -1242,19 +1244,201 @@ p.small {
 }
 
 .testimonial__name {
-  font-size: var(--font-mid-small);
+  font-size: 1.8rem;
   color: var(--col-dark);
   font-weight: 500;
   margin-bottom: 0.2rem;
 }
 
 .testimonial__location {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   color: var(--dark);
   margin-bottom: 0.8rem;
 }
 
+.selected-testimonal {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--white-col);
+}
+
 /*** footer ***/
+.footer {
+  margin-top: 8rem;
+}
+
+.companies_link {
+  margin: 0rem 0rem 4rem 15rem;
+}
+
+.companies_link div img {
+  width: 90px;
+  filter: invert(0.7);
+  transition: filter 0.3s;
+}
+
+.companies_link div img:hover {
+  filter: invert(0.5);
+}
+
+.footer_footer {
+  background-color: #14141f;
+}
+
+.inner_footer_container {
+  margin: 0rem 8rem;
+  padding: 6rem 0rem 4rem;
+}
+
+.logo__footer {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.follow_con {
+  margin-top: 3rem;
+}
+
+.move_info {
+  margin-left: 4rem;
+}
+
+.follow_con p {
+  margin: 13rem 0rem 0rem 0.6rem;
+  font-size: 1.4rem;
+  color: #a6a0a0;
+}
+
+.follow_con h1,
+.contact__us h1,
+.company__info h1,
+.newsletter h1 {
+  letter-spacing: 0.8rem;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  color: var(--light-white);
+}
+
+.company_content {
+  margin: 4rem 0.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 2rem;
+}
+
+.company_content p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #a6a0a0;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.company_contact .nav_mail span:hover,
+.company_contact .nav_mail a:hover,
+.company_content p:hover {
+  color: #a6a0a0b4;
+}
+
+.company_content {
+  margin: 4rem 0.5rem 0rem;
+}
+
+.company_contact {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+
+.company_contact .nav_number span,
+.company_contact .nav_mail span {
+  font-size: 1.6rem;
+  color: #a6a0a0;
+}
+
+.company_contact .phone {
+  transform: rotate(90deg);
+}
+
+.company_contact .nav_number p,
+.company_contact .nav_mail a {
+  font-size: 1.8rem;
+  color: #a6a0a0;
+  transition: color 0.3s;
+}
+
+.contact_socials {
+  margin-top: 1rem;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.contact_socials a {
+  text-decoration: none;
+  background-color: var(--white-col);
+  border-bottom: 1px solid var(--primary);
+  color: var(--primary);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 0.2rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact_socials a:hover {
+  background-color: var(--primary);
+  color: var(--white-col);
+}
+
+.newsletter {
+  margin-top: 2rem;
+}
+
+.newsletter_form {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.newsletter_form input {
+  width: 100%;
+  border: 1px solid var(--primary);
+  padding: 1.8rem 0.8rem;
+  font-size: 1.6rem;
+}
+
+.newsletter_form input:focus {
+  outline: none;
+}
+
+.newsletter_form input::placeholder {
+  font-size: 1.4rem;
+}
+
+.newsletter_form button {
+  white-space: nowrap;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--white-col);
+  font-size: 1.4rem;
+  padding: 1.8rem 2rem;
+  cursor: pointer;
+  transform: background 0.3s, color 0.3s;
+}
+
+.newsletter_form button:hover {
+  background-color: var(--link-hover);
+}
+
 /***  ***/
 
 /*** Spinner ***/
