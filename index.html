@@ -33,108 +33,7 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <nav class="top-header flex">
-      <div class="left_top_nav flex">
-        <div class="nav_number flex">
-          <span class="phone"><i class="fa fa-phone-alt mr-2"></i></span>
-          <p>+233 248 232 548</p>
-        </div>
-
-        <div class="nav_mail flex">
-          <span><i class="fa fa-envelope mr-2"></i></span>
-          <a href="mailto:gideonawortwe3@gmail.com">gideonawortwe3@gmail.com</a>
-        </div>
-      </div>
-
-      <div class="right_top_nav flex">
-        <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-
-        <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-
-        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-
-        <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-    </nav>
-
-    <div class="hero">
-      <!-- Navigations -->
-      <header class="hero-header flex">
-        <div class="logo flex">
-          <span class="logo_icon"><ion-icon name="pin"></ion-icon></span>
-          <p href="#">Beyond<span class="logo_the">the</span>Walk</p>
-        </div>
-
-        <nav class="nav-links">
-          <ul class="flex">
-            <li><a href="#" class="section-title flex">Home</a></li>
-            <li><a href="#" class="section-title flex">About</a></li>
-            <li><a href="#" class="section-title flex">Services</a></li>
-
-            <li class="has-submenu flex">
-              <a href="#" class="section-title-pages flex">Pages</a>
-
-              <ul>
-                <li><a href="#">Destination</a></li>
-                <li><a href="#">Booking</a></li>
-                <li><a href="#">Travel Guides</a></li>
-                <li><a href="#">Testimonial</a></li>
-              </ul>
-            </li>
-
-            <li><a href="#" class="section-title flex">Contact</a></li>
-
-            <!-- Book now button -->
-            <li><a href="#" class="nav-btn">Book now</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <!-- Images sliders -->
-      <div class="slides">
-        <div
-          class="slide"
-          style="background-image: url('./images/bg-hero.jpg')"
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url('./images/header.jpg')"
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url('./images/img3.jpg')"
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url('./images/page-banner.jpg')"
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url('./images/carousel-1.jpg')"
-        ></div>
-      </div>
-
-      <!-- Hero Content -->
-      <div class="hero-content">
-        <h1>Travel. Discover. Explore.</h1>
-        <p>Enjoy your vacation with us and make memories to cherish forever.</p>
-
-        <!--  btn--scroll-to will use this class name for js logic -->
-        <button class="btn--text">Learn more &DownArrow;</button>
-      </div>
-    </div>
+    <div id="header__container"></div>
 
     <main>
       <!-- About section -->
@@ -769,7 +668,6 @@
       </section>
 
       <!-- Testimonial -->
-      <!-- <section class="testimonial-section container"> -->
       <section class="testimonial-section">
         <div class="services-header-container">
           <h3 class="link-text services">Testimonial</h3>
@@ -777,209 +675,90 @@
         </div>
 
         <div class="slider-testimonial grid grid--4-cols">
-          <!-- <div class="slider-wrapper"> -->
           <!-- testimonal 1 -->
           <div class="slide-testimonial">
             <div class="testimonial">
-              <address class="testimonial__author flex">
+              <div class="testimonial__author">
                 <img
                   src="images/testimonial-1.jpg"
                   alt=""
                   class="testimonial__photo"
                 />
-                <h6 class="testimonial__name">Aarav Lynn</h6>
-                <p class="testimonial__location">San Francisco, USA</p>
-              </address>
+              </div>
               <blockquote class="testimonial__text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Accusantium quas quisquam non? Quas voluptate nulla minima
                 deleniti optio ullam nesciunt, numquam corporis et
               </blockquote>
+              <p class="testimonial__name">&mdash; Aarav Lynn</p>
+              <p class="testimonial__location">San Francisco, USA</p>
             </div>
           </div>
 
           <!-- testimonal 2 -->
           <div class="slide-testimonial">
             <div class="testimonial">
-              <address class="testimonial__author flex">
+              <div class="testimonial__author">
                 <img
                   src="images/testimonial-2.jpg"
                   alt=""
                   class="testimonial__photo"
                 />
-                <h6 class="testimonial__name">Miyah Miles</h6>
-                <p class="testimonial__location">London, UK</p>
-              </address>
+              </div>
               <blockquote class="testimonial__text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Accusantium quas quisquam non? Quas voluptate nulla minima
                 deleniti optio ullam nesciunt, numquam corporis et
               </blockquote>
+              <p class="testimonial__name">&mdash; Miyah Miles</p>
+              <p class="testimonial__location">London, UK</p>
             </div>
           </div>
 
           <!-- testimonal 3 -->
           <div class="slide-testimonial">
             <div class="testimonial">
-              <address class="testimonial__author flex">
+              <div class="testimonial__author">
                 <img
                   src="images/testimonial-3.jpg"
                   alt=""
                   class="testimonial__photo"
                 />
-                <h6 class="testimonial__name">Francisco Gomes</h6>
-                <p class="testimonial__location">Lisbon, Portugal</p>
-              </address>
+              </div>
               <blockquote class="testimonial__text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Accusantium quas quisquam non? Quas voluptate nulla minima
                 deleniti optio ullam nesciunt, numquam corporis et
               </blockquote>
+              <p class="testimonial__name">&mdash; Francisco Gomes</p>
+              <p class="testimonial__location">Lisbon, Portugal</p>
             </div>
           </div>
 
           <!-- testimonal 4 -->
-          <div class="slide-testimonial selected-testimonal">
+          <div class="slide-testimonial">
             <div class="testimonial">
-              <address class="testimonial__author flex">
+              <div class="testimonial__author">
                 <img
-                  src="images/testimonial-4.jpg"
+                  src="images/testimonial-3.jpg"
                   alt=""
                   class="testimonial__photo"
                 />
-                <h6 class="testimonial__name">Francisco Gomes</h6>
-                <p class="testimonial__location">Lisbon, Portugal</p>
-              </address>
+              </div>
               <blockquote class="testimonial__text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Accusantium quas quisquam non? Quas voluptate nulla minima
                 deleniti optio ullam nesciunt, numquam corporis et
               </blockquote>
+              <p class="testimonial__name">&mdash; Francisco Gomes</p>
+              <p class="testimonial__location">Lisbon, Portugal</p>
             </div>
           </div>
-          <!-- </div> -->
         </div>
-        <div class="dots"></div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="companies_link grid grid--5-cols grid--center-v">
-        <div><img src="./images/sponsors1.png" alt="" /></div>
-        <div><img src="./images/sponsors2.png" alt="" /></div>
-        <div><img src="./images/sponsors3.png" alt="" /></div>
-        <div><img src="./images/sponsors4.png" alt="" /></div>
-        <div><img src="./images/sponsors5.png" alt="" /></div>
-      </div>
-
-      <div class="footer_footer">
-        <div class="inner_footer_container grid grid--4-cols">
-          <div class="logo__footer">
-            <div class="logo flex">
-              <span class="logo_icon"><ion-icon name="pin"></ion-icon></span>
-              <p href="#">Beyond<span class="logo_the">the</span>Walk</p>
-            </div>
-
-            <div class="follow_con">
-              <div class="contact_socials flex">
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  aria-label="Twitter"
-                >
-                  <i class="fab fa-twitter"></i>
-                </a>
-
-                <a
-                  href="https://facebook.com"
-                  target="_blank"
-                  aria-label="Facebook"
-                >
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                >
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-
-                <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  aria-label="Instagram"
-                >
-                  <i class="fab fa-instagram"></i>
-                </a>
-              </div>
-
-              <p>
-                Copyright &copy; <span>2025</span> by BeyondtheWalk, Inc. <br />
-                All rights reserved.
-              </p>
-            </div>
-          </div>
-
-          <div class="company__info move_info">
-            <h1>Company</h1>
-
-            <div class="company_content">
-              <p>About Us</p>
-              <p>Contact Us</p>
-              <p>Privacy Policy</p>
-              <p>Terms & Condition</p>
-              <p>FAQ & Help</p>
-            </div>
-          </div>
-
-          <div class="company__info">
-            <h1>Usefull Links</h1>
-
-            <div class="company_content">
-              <p>About</p>
-              <p>Destination</p>
-              <p>Services</p>
-              <p>Guides</p>
-              <p>Testimonial</p>
-              <p>Blog</p>
-            </div>
-          </div>
-
-          <div class="contact__us">
-            <h1>Contact Us</h1>
-
-            <div class="company_content">
-              <div class="company_contact">
-                <div class="nav_number flex">
-                  <span class="phone"
-                    ><i class="fa fa-phone-alt mr-2"></i
-                  ></span>
-                  <p>+233 248 232 548</p>
-                </div>
-
-                <div class="nav_mail flex">
-                  <span><i class="fa fa-envelope mr-2"></i></span>
-                  <a href="mailto:gideonawortwe3@gmail.com"
-                    >gideonawortwe3@gmail.com</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="newsletter">
-              <h1>Newsletter</h1>
-
-              <form action="#" class="newsletter_form">
-                <input type="text" placeholder="Your email" />
-                <button type="submit">Sign Up</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer__container"></div>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
