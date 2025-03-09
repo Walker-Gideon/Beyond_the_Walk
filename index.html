@@ -33,7 +33,146 @@
     <script defer src="script.js"></script>
   </head>
   <body>
-    <div id="header__container"></div>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="spinner show flex bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <p
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </p>
+    </div>
+    <!-- Spinner End -->
+
+    <div id="header__container">
+      <nav class="top-header flex">
+        <div class="left_top_nav flex">
+          <div class="nav_number flex">
+            <span class="phone"><i class="fa fa-phone-alt mr-2"></i></span>
+            <p>+233 248 232 548</p>
+          </div>
+
+          <div class="nav_mail flex">
+            <span><i class="fa fa-envelope mr-2"></i></span>
+            <a href="mailto:gideonawortwe3@gmail.com"
+              >gideonawortwe3@gmail.com</a
+            >
+          </div>
+        </div>
+
+        <div class="right_top_nav flex">
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </nav>
+
+      <div class="hero">
+        <!-- Navigations -->
+        <header class="hero-header flex">
+          <div class="logo flex">
+            <span class="logo_icon"><ion-icon name="pin"></ion-icon></span>
+            <p href="#">Beyond<span class="logo_the">the</span>Walk</p>
+          </div>
+
+          <nav class="nav-links">
+            <ul class="flex">
+              <li><a href="#" class="section-title flex home_btn">Home</a></li>
+              <li>
+                <a href="#" class="section-title flex about_btn">About</a>
+              </li>
+              <li>
+                <a href="#" class="section-title flex services_btn">Services</a>
+              </li>
+
+              <li class="has-submenu flex">
+                <a href="#" class="section-title-pages flex">Pages</a>
+
+                <ul>
+                  <li>
+                    <a href="#destination" class="inner_link">Destination</a>
+                  </li>
+                  <li><a href="#process" class="inner_link">Process</a></li>
+                  <li>
+                    <a href="#travel-guide" class="inner_link">Travel Guides</a>
+                  </li>
+                  <li>
+                    <a href="#testimonial" class="inner_link">Testimonial</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#" class="section-title flex contact_btn">Contact</a>
+              </li>
+
+              <!-- Book now button -->
+              <!-- <li><a href="#" class="nav-btn">Book now</a></li> -->
+              <li><button class="nav-btn">Book now</button></li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- Images sliders -->
+        <div class="slides">
+          <div
+            class="slide"
+            style="background-image: url('./images/bg-hero.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./images/header.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./images/img3.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./images/page-banner.jpg')"
+          ></div>
+          <div
+            class="slide"
+            style="background-image: url('./images/carousel-1.jpg')"
+          ></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+          <h1>Travel. Discover. Explore.</h1>
+          <p>
+            Enjoy your vacation with us and make memories to cherish forever.
+          </p>
+
+          <!--  btn--scroll-to will use this class name for js logic -->
+          <button class="btn--text">Learn more &DownArrow;</button>
+        </div>
+      </div>
+    </div>
 
     <main>
       <!-- About section -->
@@ -161,7 +300,7 @@
       </section>
 
       <!-- Destination -->
-      <section class="destination-section sections container">
+      <section id="destination" class="destination-section sections container">
         <div class="services-header-container">
           <h3 class="link-text services">Destination</h3>
           <h1 class="header-secondary header-font">Explore Top Destination</h1>
@@ -334,7 +473,7 @@
       </section>
 
       <!-- Booking -->
-      <section class="booking-section sections container">
+      <section id="booking" class="booking-section sections container">
         <div class="booking-bg">
           <div class="booking-inner grid grid--2-cols">
             <div class="left-booking-container">
@@ -397,7 +536,7 @@
       </section>
 
       <!-- Process -->
-      <section class="process-section sections container">
+      <section id="process" class="process-section sections container">
         <div class="services-header-container">
           <h3 class="link-text services">Process</h3>
           <h1 class="header-secondary header-font">
@@ -474,7 +613,10 @@
       </section>
 
       <!-- Travel Guide -->
-      <section class="travel-guide-section sections container">
+      <section
+        id="travel-guide"
+        class="travel-guide-section sections container"
+      >
         <div class="services-header-container">
           <h3 class="link-text services">Travel Guide</h3>
           <h1 class="header-secondary header-font">Meet Our Guide</h1>
@@ -668,7 +810,7 @@
       </section>
 
       <!-- Testimonial -->
-      <section class="testimonial-section">
+      <section id="testimonial" class="testimonial-section">
         <div class="services-header-container">
           <h3 class="link-text services">Testimonial</h3>
           <h1 class="header-secondary header-font">Our Clients Say!!!</h1>
@@ -758,7 +900,123 @@
       </section>
     </main>
 
-    <div id="footer__container"></div>
+    <footer class="footer">
+      <div class="companies_link grid grid--5-cols grid--center-v">
+        <div><img src="./images/sponsors1.png" alt="" /></div>
+        <div><img src="./images/sponsors2.png" alt="" /></div>
+        <div><img src="./images/sponsors3.png" alt="" /></div>
+        <div><img src="./images/sponsors4.png" alt="" /></div>
+        <div><img src="./images/sponsors5.png" alt="" /></div>
+      </div>
+
+      <div class="footer_footer">
+        <div class="inner_footer_container grid grid--4-cols">
+          <div class="logo__footer">
+            <div class="logo flex">
+              <span class="logo_icon"><ion-icon name="pin"></ion-icon></span>
+              <p href="#">Beyond<span class="logo_the">the</span>Walk</p>
+            </div>
+
+            <div class="follow_con">
+              <div class="contact_socials flex">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  aria-label="Twitter"
+                >
+                  <i class="fab fa-twitter"></i>
+                </a>
+
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  aria-label="Facebook"
+                >
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  aria-label="Instagram"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+
+              <p>
+                Copyright &copy; <span>2025</span> by BeyondtheWalk, Inc. <br />
+                All rights reserved.
+              </p>
+            </div>
+          </div>
+
+          <div class="company__info move_info">
+            <h1>Company</h1>
+
+            <div class="company_content">
+              <p>About Us</p>
+              <p>Contact Us</p>
+              <p>Privacy Policy</p>
+              <p>Terms & Condition</p>
+              <p>FAQ & Help</p>
+            </div>
+          </div>
+
+          <div class="company__info">
+            <h1>Usefull Links</h1>
+
+            <div class="company_content">
+              <p>About</p>
+              <p>Destination</p>
+              <p>Services</p>
+              <p>Guides</p>
+              <p>Testimonial</p>
+              <p>Blog</p>
+            </div>
+          </div>
+
+          <div class="contact__us">
+            <h1>Contact Us</h1>
+
+            <div class="company_content">
+              <div class="company_contact">
+                <div class="nav_number flex">
+                  <span class="phone"
+                    ><i class="fa fa-phone-alt mr-2"></i
+                  ></span>
+                  <p>+233 248 232 548</p>
+                </div>
+
+                <div class="nav_mail flex">
+                  <span><i class="fa fa-envelope mr-2"></i></span>
+                  <a href="mailto:gideonawortwe3@gmail.com"
+                    >gideonawortwe3@gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="newsletter">
+              <h1>Newsletter</h1>
+
+              <form action="#" class="newsletter_form">
+                <input type="text" placeholder="Your email" />
+                <button type="submit">Sign Up</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
