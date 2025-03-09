@@ -34,7 +34,7 @@
   </head>
   <body>
     <!-- Spinner Start -->
-    <div
+    <!-- <div
       id="spinner"
       class="spinner show flex bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
     >
@@ -45,7 +45,7 @@
       >
         <span class="sr-only">Loading...</span>
       </p>
-    </div>
+    </div> -->
     <!-- Spinner End -->
 
     <div id="header__container">
@@ -112,7 +112,7 @@
               <li class="has-submenu flex">
                 <a href="#" class="section-title-pages flex">Pages</a>
 
-                <ul>
+                <ul class="inner__nav__links">
                   <li>
                     <a href="#destination" class="inner_link">Destination</a>
                   </li>
@@ -132,7 +132,7 @@
 
               <!-- Book now button -->
               <!-- <li><a href="#" class="nav-btn">Book now</a></li> -->
-              <li><button class="nav-btn">Book now</button></li>
+              <li><button class="nav-btn book_btn">Book now</button></li>
             </ul>
           </nav>
         </header>
@@ -169,14 +169,16 @@
           </p>
 
           <!--  btn--scroll-to will use this class name for js logic -->
-          <button class="btn--text">Learn more &DownArrow;</button>
+          <button class="btn--text scroll_to_more">
+            Learn more &DownArrow;
+          </button>
         </div>
       </div>
     </div>
 
     <main>
       <!-- About section -->
-      <section class="about-section sections container">
+      <section class="about-section sections container" id="about_section">
         <div class="inner-about-container grid grid--2-cols">
           <div class="img-container">
             <img src="images/about.jpg" alt="A lady going on a hike" />

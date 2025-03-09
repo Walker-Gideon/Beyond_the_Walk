@@ -96,3 +96,34 @@ document.querySelectorAll(".inner_link").forEach((links) => {
     destinationSection.style.display = "block";
   });
 });
+
+// Scrolling logic with the links
+document
+  .querySelector(".inner__nav__links")
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+
+    if (e.target.classList.contains("inner_link")) {
+      const refId = e.target.getAttribute("href");
+      document.querySelector(refId).scrollIntoView({ behavior: "smooth" });
+    }
+  });
+
+// Button Scrolling logic
+const scrollToMoreBtn = document.querySelector(".scroll_to_more");
+const bookBtn = document.querySelector(".book_btn");
+
+function scrollingFun(btn, sectionScrollTo) {
+  btn.addEventListener("click", function (e) {
+    const section = sectionScrollTo.getBoundingClientRect();
+
+    window.scrollTo({
+      left: section.left + window.pageXOffset,
+      top: section.top + window.pageYOffset,
+      behavior: "smooth",
+    });
+  });
+}
+
+scrollingFun(scrollToMoreBtn, aboutSection);
+scrollingFun(bookBtn, bookingSection);
