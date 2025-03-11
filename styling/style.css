@@ -53,20 +53,36 @@ body {
 }
 
 /*** Spinner ***/
-.spinner {
+.loader {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 30rem;
+  left: 77rem;
+  width: 7rem;
+  padding: 1.2rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #25b09b;
+  --_m: conic-gradient(#0000 10%, #000), linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  -webkit-mask-composite: source-out;
+  mask-composite: subtract;
+  transition: opacity 0.75s, visibility 0.75s;
+  animation: l3 1s infinite linear;
+  z-index: 9999;
 }
 
-#spinner {
+.loader_hidden {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
-  z-index: 99999;
 }
 
-#spinner.show {
-  transition: opacity 0.5s ease-out, visibility 0s linear 0s;
-  visibility: visible;
-  opacity: 1;
+@keyframes l3 {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /*** General  ***/
