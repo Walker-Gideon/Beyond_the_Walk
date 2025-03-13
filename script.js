@@ -10,6 +10,7 @@ const aboutSection = document.querySelector(".about-section");
 const servicesSection = document.querySelector(".services-section");
 const bookingSection = document.querySelector(".booking-section");
 const processSection = document.querySelector(".process-section");
+const contactSection = document.querySelector(".contact-display");
 const testimonialSection = document.querySelector(".testimonial-section");
 const travelGuideSection = document.querySelector(".travel-guide-section");
 const destinationSection = document.querySelector(".destination-section");
@@ -33,7 +34,8 @@ function spinnerFun(
   booking,
   process,
   testimonial,
-  destionation
+  destionation,
+  contact
 ) {
   loder.classList.remove("loader_hidden");
 
@@ -53,6 +55,7 @@ function spinnerFun(
     processSection.style.display = process;
     testimonialSection.style.display = testimonial;
     destinationSection.style.display = destionation;
+    contactSection.style.display = contact;
   }, 1000);
 }
 
@@ -115,7 +118,8 @@ homeBtn.addEventListener("click", () => {
     "block",
     "block",
     "block",
-    "block"
+    "block",
+    "none"
   );
 });
 
@@ -130,6 +134,7 @@ servicesBtn.addEventListener("click", () => {
     "none",
     "none",
     "block",
+    "none",
     "none"
   );
 });
@@ -145,7 +150,24 @@ aboutBtn.addEventListener("click", () => {
     "none",
     "none",
     "none",
+    "none",
     "none"
+  );
+});
+
+contactBtn.addEventListener("click", () => {
+  spinnerFun(
+    "Contact Us",
+    "Learn about our journey, mission, and the values that drive our passion for delivering unforgettable experiences.",
+    "hidden",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "none",
+    "block"
   );
 });
 
@@ -161,6 +183,7 @@ document.querySelectorAll(".inner_link").forEach((links) => {
     processSection.style.display = "block";
     testimonialSection.style.display = "block";
     destinationSection.style.display = "block";
+    contactSection.style.display = "none";
   });
 });
 

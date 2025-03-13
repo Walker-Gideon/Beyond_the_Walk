@@ -800,7 +800,7 @@
       </section>
 
       <!-- Testimonial -->
-      <section id="testimonial" class="testimonial-section">
+      <section id="testimonial" class="testimonial-section sections container">
         <div class="services-header-container">
           <h3 class="link-text services">Testimonial</h3>
           <h1 class="header-secondary header-font">Our Clients Say!!!</h1>
@@ -889,10 +889,11 @@
         </div>
       </section>
 
-      <div class="contact-display">
+      <!-- Contact Info -->
+      <section class="contact-display">
         <div class="services-header-container">
           <h3 class="link-text services">Contact us</h3>
-          <h1 class="header-secondary header-font">Our Clients Say!!!</h1>
+          <h1 class="header-secondary header-font">Contact For Any Query</h1>
         </div>
 
         <div class="grid grid--3-cols">
@@ -901,27 +902,43 @@
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
               voluptatem nostrum necessitatibus nisi odio unde. Asperiores
-              voluptates, sunt delectus similique eaque eos quibusdam voluptatum
-              eligendi temporibus deleniti qui earum est?
+              voluptates,
             </p>
 
             <div class="contact-info-container">
-              <div class="flex">
-                <div></div>
+              <div class="info_content flex">
+                <div class="info_icon_con">
+                  <span class="contact_info_icon"
+                    ><ion-icon name="pin"></ion-icon
+                  ></span>
+                </div>
+
                 <div>
                   <h2>Office</h2>
                   <p>123 Street, New York, USA</p>
                 </div>
               </div>
-              <div class="flex">
-                <div></div>
+
+              <div class="info_content flex">
+                <div class="info_icon_con">
+                  <span class="contact_info_icon"
+                    ><ion-icon name="pin"></ion-icon
+                  ></span>
+                </div>
+
                 <div>
                   <h2>Mobile</h2>
                   <p>+233248232548</p>
                 </div>
               </div>
-              <div class="flex">
-                <div></div>
+
+              <div class="info_content flex">
+                <div class="info_icon_con">
+                  <span class="contact_info_icon"
+                    ><ion-icon name="pin"></ion-icon
+                  ></span>
+                </div>
+
                 <div>
                   <h2>Email</h2>
                   <p>info@example.com</p>
@@ -930,11 +947,36 @@
             </div>
           </div>
 
-          <div class="contact_1"></div>
+          <div class="contact_2"></div>
 
-          <div class="contact_1"></div>
+          <div class="contact_3">
+            <form action="#">
+              <div class="flex contact-input-1">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+              </div>
+
+              <input
+                type="text"
+                placeholder="Subject"
+                required
+                class="flex contact-input-2"
+              />
+
+              <textarea
+                name=""
+                id=""
+                placeholder="Message"
+                class="contact-message"
+              ></textarea>
+
+              <button type="submit" class="btn contact-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
 
     <footer class="footer">
