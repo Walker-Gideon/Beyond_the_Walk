@@ -37,19 +37,7 @@ body {
 .nav-links .home_btn.active,
 .nav-links .section-title-pages.active {
   color: var(--primary);
-}
-
-.nav-links .section-title::before.active,
-.nav-links .home_btn::before.active,
-.nav-links .section-title-pages::before.active {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 2px;
-  bottom: -1.4px;
-  left: 0;
-  background: var(--primary);
-  transition: width 0.3s ease;
+  border-bottom: 2px solid var(--primary);
 }
 
 /*** Spinner ***/
@@ -148,7 +136,7 @@ body {
 
 /*** Button ***/
 button:focus {
-  outline: none;
+  /* outline: none; */
 }
 
 .btn {
@@ -269,6 +257,7 @@ button:focus {
   position: absolute;
   top: 0;
   width: 100%;
+  height: 10rem;
   justify-content: space-between;
   padding: 0 3.2rem;
   border-bottom: 0.5px solid var(--light-white);
@@ -305,7 +294,6 @@ button:focus {
   list-style: none;
   padding: 0;
   margin: 0;
-  height: 10rem;
   justify-content: space-between;
   gap: 4rem;
 }
@@ -360,8 +348,8 @@ button:focus {
   position: absolute;
   content: "";
   width: 100%;
-  height: 2px;
-  bottom: -1.4px;
+  height: 1px;
+  bottom: -1.2px;
   left: 0;
   background: var(--primary);
   transition: width 0.3s ease;
@@ -372,8 +360,8 @@ button:focus {
   position: absolute;
   content: "";
   width: 0;
-  height: 2px;
-  bottom: -1.4px;
+  height: 1px;
+  bottom: -1.2px;
   left: 50%;
   background: var(--primary);
   transition: width 0.3s ease, left 0.3s ease;
@@ -409,6 +397,7 @@ button:focus {
   padding: 1.4rem;
   height: 23rem;
   display: none;
+  z-index: 999;
 }
 
 .has-submenu ul a {

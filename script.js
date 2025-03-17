@@ -22,6 +22,10 @@ const scrollToMoreBtn = document.querySelector(".scroll_to_more");
 
 const bookBtn = document.querySelector(".book_btn");
 
+const tabsContainer = document.querySelector(".operations-tab-container");
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContent = document.querySelectorAll(".operations__content");
+
 // Spinner
 loder.classList.add("loader_hidden");
 function spinnerFun(
@@ -75,19 +79,7 @@ if (page_sidebtn && page) {
   console.error("Element(s) not found:", { page_sidebtn, page });
 }
 
-// header and footer function
-function loadComponent(id, file) {
-  fetch(file)
-    .then((response) => response.text())
-    .then((data) => (document.getElementById(id).innerHTML = data))
-    .catch((error) => console.error(`Error loading ${file}:`, error));
-}
-
-// loadComponent("header__container", "header.html");
-// loadComponent("footer__container", "footer.html");
-
 //Action of the navigation buttons
-
 homeBtn.classList.add("active");
 activeBtn.forEach((button) => {
   button.addEventListener("click", () => {
@@ -96,16 +88,6 @@ activeBtn.forEach((button) => {
     button.classList.add("active");
   });
 });
-
-/*
-
-
-<!-- Contact Section -->
-<h1 class="hero_h1">Contact Us</h1>
-<p class="para_p">
-  Have questions or need assistance? Reach out to our team and let's plan your perfect getaway together.
-</p>
-*/
 
 homeBtn.addEventListener("click", () => {
   spinnerFun(
@@ -216,10 +198,6 @@ scrollingFun(scrollToMoreBtn, aboutSection);
 scrollingFun(bookBtn, bookingSection);
 
 // Process logic
-const tabsContainer = document.querySelector(".operations-tab-container");
-const tabs = document.querySelectorAll(".operations__tab");
-const tabsContent = document.querySelectorAll(".operations__content");
-
 tabsContainer.addEventListener("click", (e) => {
   const tabBtnsClick = e.target.closest(".operations__tab");
 
