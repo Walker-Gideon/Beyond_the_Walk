@@ -1504,3 +1504,10 @@ p.small {
 .contact-btn:hover {
   background-color: var(--primary-sec);
 }
+
+/* Media Queries */
+@media (max-width: 96em) {
+  html {
+    font-size: 50%;
+  }
+}

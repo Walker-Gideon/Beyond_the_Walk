@@ -214,3 +214,29 @@ function scrollingFun(btn, sectionScrollTo) {
 
 scrollingFun(scrollToMoreBtn, aboutSection);
 scrollingFun(bookBtn, bookingSection);
+
+// Process logic
+const tabsContainer = document.querySelector(".operations-tab-container");
+const tabs = document.querySelectorAll(".operations__tab");
+const tabsContent = document.querySelectorAll(".operations__content");
+
+tabsContainer.addEventListener("click", (e) => {
+  const tabBtnsClick = e.target.closest(".operations__tab");
+
+  if (!tabBtnsClick) return;
+
+  console.log(tabBtnsClick);
+
+  // remove select
+  tabs.forEach((tab) => tab.classList.remove("operations__tab--active"));
+  tabsContent.forEach((content) =>
+    content.classList.remove("operations__content--active")
+  );
+
+  // Add selected tab
+  tabBtnsClick.classList.add("operations__tab--active");
+
+  document
+    .querySelector(`.operations__content--${tabBtnsClick.dataset.tab}`)
+    .classList.add("operations__content--active");
+});
