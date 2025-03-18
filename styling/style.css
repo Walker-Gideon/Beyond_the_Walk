@@ -135,10 +135,6 @@ body {
 }
 
 /*** Button ***/
-button:focus {
-  /* outline: none; */
-}
-
 .btn {
   display: inline-block;
   font-family: "Nunito", sans-serif;
@@ -466,7 +462,8 @@ button:focus {
 .slides {
   display: flex;
   width: 100%;
-  height: 85%;
+  /* height: 85%; */
+  height: 90%;
 
   /* check the other property name on animation "infinite" */
   animation: slide 20s alternate;
@@ -526,7 +523,8 @@ button:focus {
 /*** Hero Content ***/
 .hero-content {
   position: absolute;
-  top: 40%;
+  /* top: 40%; */
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -563,6 +561,10 @@ button:focus {
 }
 
 /*** About section ***/
+.about-section {
+  margin-top: 0rem;
+}
+
 .inner-about-container {
   gap: 2rem;
   align-items: center;
@@ -617,6 +619,7 @@ button:focus {
 
 .about-bottom-container {
   margin-top: 3.2rem;
+  /* margin-top: 4.2rem; */
   gap: 3.2rem;
 }
 
@@ -1498,5 +1501,51 @@ p.small {
 @media (max-width: 96em) {
   html {
     font-size: 50%;
+  }
+
+  .top-header {
+    background-color: red;
+  }
+
+  .loader {
+    top: 40rem;
+    left: 90rem;
+  }
+
+  /*** About section ***/
+  .img-container {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 84em) {
+  .top-header {
+    background-color: yellow;
+  }
+}
+
+@media (max-width: 75em) {
+  /* remove all the navigation btn and make then a menu btn */
+  .top-header {
+    background-color: green;
+  }
+}
+
+@media (max-width: 59em) {
+  /* the social btn at the top navigation remove it and make it the three dot */
+  .top-header {
+    background-color: orange;
+  }
+}
+
+@media (max-width: 44em) {
+  .top-header {
+    background-color: violet;
+  }
+}
+
+@media (max-width: 34em) {
+  .top-header {
+    background-color: gray;
   }
 }

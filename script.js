@@ -89,6 +89,8 @@ activeBtn.forEach((button) => {
   });
 });
 
+function homeAction() {}
+
 homeBtn.addEventListener("click", () => {
   spinnerFun(
     "Travel. Discover. Explore.",
@@ -157,6 +159,11 @@ document.querySelectorAll(".inner_link").forEach((links) => {
   links.addEventListener("click", () => {
     activeBtn.forEach((btn) => btn.classList.remove("active"));
     homeBtn.classList.add("active");
+
+    heroH1.textContent = "Travel. Discover. Explore.";
+    parap.textContent =
+      "Enjoy your vacation with us and make memories to cherish forever.";
+    scrollToMoreBtn.style.visibility = "visible";
 
     aboutSection.style.display = "block";
     travelGuideSection.style.display = "block";
