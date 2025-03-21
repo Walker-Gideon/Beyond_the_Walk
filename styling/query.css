@@ -164,6 +164,35 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  /* Process */
+  .operations-primary {
+    display: none;
+    transition: all 0.4s ease;
+  }
+
+  .operations-secondary {
+    display: block;
+    margin-top: 0rem;
+    transition: all 0.4s ease;
+  }
+
+  .btn-btn--1 {
+    white-space: nowrap;
+    font-size: 1.8rem;
+    padding: 1.2rem 4rem;
+    cursor: auto;
+  }
+
+  .btn-btn--2 {
+    padding: 1.2rem 8.2rem;
+    cursor: auto;
+  }
+
+  .btn-btn--3 {
+    padding: 1.2rem 8.8rem;
+    cursor: auto;
+  }
+
   /* footer */
   .inner_footer_container {
     grid-template-columns: repeat(3, 1fr);
@@ -209,6 +238,30 @@
 
   .righ-booking-container {
     margin: 0rem 0rem 4rem;
+  }
+
+  /* Process */
+  .operations__content--3,
+  .operations__content--2,
+  .operations__content--1 {
+    font-size: 1.8rem;
+  }
+
+  .operations__header {
+    font-size: 3rem;
+  }
+
+  .operations__icon {
+    height: 9rem;
+    width: 9rem;
+  }
+
+  .operations__icon i {
+    font-size: 3rem;
+  }
+
+  .operations__content p {
+    font-size: 2rem;
   }
 
   /* footer */

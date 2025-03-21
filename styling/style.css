@@ -983,8 +983,9 @@ p.small {
 }
 
 /*** Process ***/
-.operations-primary {
+.operations-secondary {
   display: none;
+  margin-top: 0rem;
 }
 
 .operations {
