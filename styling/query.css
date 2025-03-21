@@ -103,6 +103,11 @@
     background-color: white;
   }
 
+  /* Hero */
+  .hero-content p {
+    margin: 0rem 10rem;
+  }
+
   /* Process */
   .operations {
     width: 100%;
@@ -132,6 +137,27 @@
   /* General */
   .container {
     margin: 4rem;
+  }
+
+  /* Hero Content */
+  .hero-conten {
+    width: 50%;
+  }
+
+  .hero-content h1 {
+    font-size: 5.2rem;
+  }
+
+  .hero-content p {
+    font-size: 2.2rem;
+    margin: 0rem 8rem;
+  }
+
+  .btn--text {
+    font-size: 1.8rem;
+    padding: 1.2rem 3rem;
+    border-radius: 9px;
+    margin-top: 1.8rem;
   }
 
   /* About section */
