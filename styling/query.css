@@ -298,6 +298,19 @@
     background-color: violet;
   }
 
+  /* Booking */
+  .booking-top-next-input,
+  .booking-top-input {
+    display: grid;
+    width: 100%;
+  }
+
+  .booking-top-next-input select,
+  .booking-top-next-input input,
+  .booking-top-input input {
+    width: 100%;
+  }
+
   /* footer */
   .companies_link div img {
     width: 50px;
