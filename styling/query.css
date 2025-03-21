@@ -1,0 +1,258 @@
+@media (max-width: 96em) {
+  html {
+    font-size: 51%;
+  }
+
+  .top-header {
+    background-color: red;
+  }
+
+  .loader {
+    top: 40rem;
+    left: 90rem;
+  }
+
+  /*** About section ***/
+  .img-container {
+    min-height: 500px;
+  }
+
+  .img-container img {
+    object-position: center;
+  }
+
+  .about-content {
+    right: 49px;
+  }
+
+  /* footer */
+  .inner_footer_container {
+    padding: 12rem 14rem 8rem;
+  }
+}
+
+@media (max-width: 77em) {
+  .top-header {
+    background-color: white;
+  }
+
+  /* About section */
+  .inner-about-container {
+    gap: 1rem;
+  }
+
+  /* Travel Guide */
+  .guide-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 6rem;
+    row-gap: 8rem;
+  }
+
+  .guide {
+    width: 70%;
+  }
+
+  .guide:nth-child(odd) {
+    justify-self: end;
+  }
+
+  /* Process */
+  .process-section {
+    margin: 6.4rem 4rem;
+  }
+}
+
+@media (max-width: 75em) {
+  /* remove all the navigation btn and make then a menu btn */
+  .top-header {
+    background-color: green;
+  }
+
+  /* About section */
+  .img-container img {
+    width: 95%;
+  }
+
+  /* Destination */
+  .destination-section {
+    margin: 6.4rem 4rem;
+  }
+
+  /* Travel Guide */
+  .guide {
+    width: 70%;
+  }
+
+  /* footer */
+  .companies_link {
+    margin: 0rem 4rem;
+  }
+
+  .companies_link div img {
+    width: 70px;
+  }
+
+  .inner_footer_container {
+    padding: 12rem 10rem 8rem;
+  }
+}
+
+@media (max-width: 70em) {
+  /* remove all the navigation btn and make then a menu btn */
+  .top-header {
+    background-color: white;
+  }
+
+  /* Process */
+  .operations {
+    width: 100%;
+  }
+
+  .btn-btn {
+    white-space: nowrap;
+    font-size: 1.8rem;
+    padding: 1.2rem 4rem;
+  }
+
+  .btn-btn:nth-child(2) {
+    padding: 1.2rem 8.2rem;
+  }
+
+  .btn-btn:nth-child(3) {
+    padding: 1.2rem 8.8rem;
+  }
+}
+
+@media (max-width: 59em) {
+  /* the social btn at the top navigation remove it and make it the three dot */
+  .top-header {
+    background-color: orange;
+  }
+
+  /* General */
+  .container {
+    margin: 4rem;
+  }
+
+  /* About section */
+  .about-section {
+    margin-top: 0;
+    padding: 0rem 0rem 3rem;
+  }
+
+  .inner-about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .img-container img {
+    width: 100%;
+  }
+
+  .about-content {
+    right: 0;
+    width: 100%;
+  }
+
+  .about-bottom-container {
+    gap: 2.6rem;
+  }
+
+  /* Destination */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* footer */
+  .inner_footer_container {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 8rem;
+  }
+}
+
+@media (max-width: 55em) {
+  /* About */
+  .slider-testimonial,
+  .services-content-container,
+  .about-bottom-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slider-testimonial,
+  .services-content-container {
+    row-gap: 8rem;
+  }
+
+  .guide-container {
+    column-gap: 5rem;
+    row-gap: 7rem;
+  }
+
+  .guide {
+    width: 100%;
+  }
+
+  /* Destination */
+  .destination-section {
+    margin: 6.4rem 0rem;
+  }
+
+  /* Booking */
+  .booking-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .left-booking-container {
+    margin: 4rem 0rem;
+  }
+
+  .righ-booking-container {
+    margin: 0rem 0rem 4rem;
+  }
+
+  /* footer */
+  .companies_link {
+    margin: 0rem;
+  }
+
+  .companies_link div img {
+    width: 60px;
+  }
+
+  .inner_footer_container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    row-gap: 8rem;
+  }
+
+  /* .move_info, */
+  .move_left {
+    justify-self: start;
+    grid-column-start: 1;
+    grid-row: span 1 / 2;
+  }
+
+  .move_info {
+    justify-self: start;
+    grid-column-start: 2;
+    grid-row: span 1 / 2;
+  }
+}
+
+@media (max-width: 44em) {
+  .top-header {
+    background-color: violet;
+  }
+
+  /* footer */
+  .companies_link div img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 34em) {
+  .top-header {
+    background-color: gray;
+  }
+}
