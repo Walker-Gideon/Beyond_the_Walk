@@ -41,12 +41,15 @@ body {
 }
 
 /*** Spinner ***/
-.loader {
+.loader_container {
   display: flex;
+  align-items: center;
   justify-content: center;
+}
+
+.loader {
   position: fixed;
-  top: 30rem;
-  left: 77rem;
+  top: 40rem;
   width: 7rem;
   padding: 1.2rem;
   aspect-ratio: 1;

@@ -7,11 +7,6 @@
     background-color: red;
   }
 
-  .loader {
-    top: 40rem;
-    left: 90rem;
-  }
-
   /*** About section ***/
   .img-container {
     min-height: 500px;
